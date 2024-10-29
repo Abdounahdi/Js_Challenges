@@ -20,13 +20,13 @@ function getWeekInfo(str) {
       dateDayReserved.setDate(dateDayReserved.getDate() + (7 - dateDayNum))
     );
     console.log(
-      `${day[startWeek.getDay()]} : ${
-        day[startWeek.getDay()]
-      }/${startWeek.getMonth()}/${startWeek.getFullYear()} ,${
+      `${day[startWeek.getDay()]} : ${startWeek.getUTCDate()}/${
+        startWeek.getMonth() + 1
+      }/${startWeek.getFullYear()} ,${
         day[endWeek.getDay()]
-      } : ${
-        day[endWeek.getDay()]
-      }/${endWeek.getMonth()}/${endWeek.getFullYear()} `
+      } : ${endWeek.getUTCDate()}/${
+        endWeek.getMonth() + 1
+      }/${endWeek.getFullYear()} `
     );
   }
 }
